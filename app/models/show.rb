@@ -1,6 +1,6 @@
 class Show < ActiveRecord::Base
   belongs_to :network
-  belongs_to :characters
+  has_many :characters
   
   def actors_list
     self.actors.map do |actor|
